@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block bg_color %}#e8eaf6{% endblock %}
+
+{% block content %}
+<h2>Cinema Multiplex</h2>
+<p>Experience movies like never before with 4K Laser Projection and immersive Dolby Atmos sound systems. Enjoy recliner seating and delicious gourmet popcorn.</p>
+
+<h3>Now Showing</h3>
+<table class="info-table" style="background-color: white;">
+    <tr>
+        <th>Movie Title</th>
+        <th>Language / Genre</th>
+        <th>Screen</th>
+        <th>Show Timings</th>
+    </tr>
+    <tr>
+        <td>Galactic Odyssey</td>
+        <td>English / Sci-Fi</td>
+        <td>Screen 1 (4K)</td>
+        <td>10:30 AM, 02:00 PM, 06:30 PM</td>
+    </tr>
+    <tr>
+        <td>City of Legends</td>
+        <td>Hindi / Action Drama</td>
+        <td>Screen 2 (Dolby)</td>
+        <td>11:15 AM, 03:30 PM, 08:00 PM</td>
+    </tr>
+    <tr>
+        <td>Laugh Express</td>
+        <td>Regional / Comedy</td>
+        <td>Screen 3</td>
+        <td>01:00 PM, 05:00 PM, 09:15 PM</td>
+    </tr>
+    <tr>
+        <td>Mystery Island</td>
+        <td>English / Thriller</td>
+        <td>Screen 4 (Recliner)</td>
+        <td>12:30 PM, 04:45 PM, 07:30 PM</td>
+    </tr>
+</table>
+{% endblock %}

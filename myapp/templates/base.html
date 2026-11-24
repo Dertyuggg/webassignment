@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ABC Shopping Mall</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+        .navbar {
+            background-color: lightgrey;
+            padding: 12px;
+            text-align: center;
+            border-top: 1px solid #cccccc;
+            border-bottom: 2px solid #bbbbbb;
+        }
+        .nav-link {
+            display: inline-block;
+            padding: 10px 18px;
+            margin: 0 8px;
+            background-color: #ffffff;
+            color: #333333;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #cccccc;
+        }
+        .nav-link:hover {
+            background-color: #e6e6e6;
+        }
+        .content {
+            padding: 30px;
+            min-height: 480px;
+        }
+        table.info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table.info-table th, table.info-table td {
+            border: 1px solid #888888;
+            padding: 10px;
+            text-align: left;
+        }
+        table.info-table th {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>ABC Shopping Mall</h1>
+        <p><b>Shop, Eat and Enjoy!</b></p>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <div class="navbar">
+        <a href="{% url 'home' %}" class="nav-link">Home</a>
+        <a href="{% url 'fashion' %}" class="nav-link">Fashion & Apparel</a>
+        <a href="{% url 'food' %}" class="nav-link">Food Court</a>
+        <a href="{% url 'cinema' %}" class="nav-link">Cinema</a>
+        <a href="{% url 'contact' %}" class="nav-link">Contact Us</a>
+    </div>
+
+    <!-- Content Area -->
+    <div class="content" style="background-color: {% block bg_color %}white{% endblock %};">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
